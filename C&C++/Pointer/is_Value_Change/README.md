@@ -3,7 +3,7 @@ This program demonstrates pointer assignment in C++ and its effects on memory al
 
 ## Description
 
-### [Practice1](./Practice1.cpp)
+# [Practice1](./Practice1.cpp)
 The program defines a function fn that takes a pointer to an integer as a parameter. Inside the function:
 
 1. It dynamically allocates memory for an integer variable b.
