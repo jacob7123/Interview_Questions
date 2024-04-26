@@ -30,7 +30,7 @@ Max Heap after conversion:
 Level: 1
 7
 Level: 2
-6 4
+3 6
 Level: 3
-2 1 3 5
+1 2 4 5
 ```
