@@ -1,9 +1,8 @@
 # Pointer Assignment in C++
 This program demonstrates pointer assignment in C++ and its effects on memory allocation.
 
-## Description
-
 # [Practice1](./Practice1.cpp)
+## Description
 The program defines a function fn that takes a pointer to an integer as a parameter. Inside the function:
 
 1. It dynamically allocates memory for an integer variable b.
@@ -34,3 +33,30 @@ In the `fn` function:
 3. Assigns the address of `b` to the local pointer `p`.
 
 However, `p` is a local variable within the fn function. When you assign `b` to `p`, you are modifying the local pointer `p`, not the pointer `p` in the main function. Therefore, the change made to `p` inside the fn function does not affect the pointer `p` in the main function.
+
+## Fix
+### Using Double Pointer
+```bash
+void fn(int** p){
+   int* b = (int*)malloc(sizeof(int));
+   *b = 2;
+   *p = b;
+}
+```
+### Using Reference
+```bash
+void fn(int*& p){
+   int* b = (int*)malloc(sizeof(int));
+   *b = 2;
+   p = b;
+}
+```
+### Assign value
+```bash
+void fn(int* p){
+   int* b = (int*)malloc(sizeof(int));
+   *b = 2;
+   *p = *b;
+   delete b;
+}
+```
